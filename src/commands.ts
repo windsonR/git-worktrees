@@ -16,9 +16,7 @@ export const Commands = {
     window.showInformationMessage(item.path);
     const uri = Uri.file(item.path);
     commands.executeCommand("vscode.openFolder", uri, {
-      options: {
-        forceNewWindow: false,
-      },
+      forceNewWindow: true,
     });
   },
   async add(callbacks: Refresh) {
@@ -151,8 +149,15 @@ const createWorkTree = async ({
 
   const branch = branchName.replace(regex, "_");
 
-  const basePath = path.join(path.dirname(rootPath ?? ""), `${folderName}.worktrees`);
-  const defaultPath = path.join(basePath, branch);
+  const realFolderName = folderName?.split('@')[0] as string
+
+  let newRootPath = rootPath
+  if (rootPath?.indexOf('.worktree')) {
+    newRootPath = rootPath.substring(0,rootPath.indexOf(realFolderName)+realFolderName.length)
+  }
+
+  const basePath = path.join(path.dirname(newRootPath ?? ""), `${realFolderName}.worktree`);
+  const defaultPath = path.join(basePath, realFolderName+'@'+branch);
   const defaultUri = Uri.file(defaultPath);
 
   await workspace.fs.createDirectory(defaultUri);
