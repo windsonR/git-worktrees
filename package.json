@@ -1,5 +1,5 @@
 {
-  "name": "@windson/git-worktrees-explorer",
+  "name": "git-worktrees-explorer-by-windson",
   "displayName": "Git Worktrees",
   "publisher": "windsonR",
   "description": "Switch between git worktrees easily",
