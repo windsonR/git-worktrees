@@ -1,3 +1,24 @@
+# about
+
+This repo forked `https://github.com/joaorr3/git-worktrees`.
+And it changed a little to use.
+
+# changed
+
+- worktree will always open in new window.
+- when create a new worktree, it will always use the same `.worktree` folder, like this:
+
+```
+- a
+  - .git
+- a.worktree
+  - a.branchA
+    - .git
+  - a.branchB
+    - .git
+- b
+```
+
 # git-worktrees-explorer
 
 This extension provides a GUI for managing git worktrees. You can add, delete and switch between them.
