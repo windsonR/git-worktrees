@@ -1,6 +1,6 @@
 {
   "name": "git-worktrees-explorer-by-windson",
-  "displayName": "Git Worktrees",
+  "displayName": "Forked Git Worktrees",
   "publisher": "windsonR",
   "description": "Switch between git worktrees easily",
   "version": "0.0.7",
