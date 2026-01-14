@@ -1,3 +1,12 @@
+# deprecated
+`Visual Studio Code@1.108` experimental support git worktree's manage and new.
+
+After `VSCode's` git plugin supports worktree, this plugin is no longer necessary (at least in my opinion).
+
+# vscode
+
+Set `scm.repositories.explorer` to `true` and `scm.repositories.selectionMode` to `'single'`
+
 # about
 
 This repo forked `https://github.com/joaorr3/git-worktrees`.
